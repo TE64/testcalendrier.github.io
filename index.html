@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendrier des Travaux</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Calendrier des Travaux</h1>
+  
+  <form id="eventForm">
+    <label for="startDate">Date de début :</label>
+    <input type="date" id="startDate" name="startDate" required><br><br>
+    
+    <label for="endDate">Date de fin :</label>
+    <input type="date" id="endDate" name="endDate" required><br><br>
+    
+    <label for="chefChantier">Chef de chantier :</label>
+    <input type="text" id="chefChantier" name="chefChantier" required><br><br>
+    
+    <label for="commune">Commune :</label>
+    <input type="text" id="commune" name="commune" required><br><br>
+    
+    <label for="numArmoire">Numéro d'armoire :</label>
+    <input type="text" id="numArmoire" name="numArmoire" required><br><br>
+    
+    <label for="natureTravaux">Nature des travaux :</label>
+    <input type="text" id="natureTravaux" name="natureTravaux" required><br><br>
+    
+    <label for="entreprise">Entreprise :</label>
+    <select id="entreprise" name="entreprise">
+      <option value="coreba">Coreba</option>
+      <option value="etpm">ETPM</option>
+      <option value="eiffage">Eiffage</option>
+      <option value="cegelec">Cegelec</option>
+    </select><br><br>
+    
+    <button type="submit">Ajouter un événement</button>
+  </form>
+  
+  <div id="calendar"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
